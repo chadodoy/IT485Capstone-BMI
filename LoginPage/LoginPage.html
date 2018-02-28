@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="mainn.css">
+
+</head>
+
+	
+<h2>UMass Boston Registeration/Sign in Page</h2>
+<h3>Keep track of your helth and stay fit </h3>
+
+	
+<body>
+
+	<div class="login-page">
+ 	<div class="form">
+ 		
+ 		<form class"register-form">
+ 		<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" align="center"> <p> </p>
+ 		<p class="message"> Go Ahead! Register :) <p> </p>
+ 		<input type="text" placeholder="User Name"/>	
+		<input type="password" placeholder="Password"/>
+		<input type="text" placeholder="UMass Email Address OR ID"/>
+		
+		
+		<button>Create</button> <p> </p>
+	
+		<p class="message"> Already Registered? <a href="#">Login</a>
+			<p> </p>
+		</p>
+		</form>
+		
+	<form class="login-form">
+	<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" align="center"> <p> </p>
+	<p class="message">Secure Access Login <p> </p>
+	<input type="text" placeholder="UMass Email Address"/>
+	<input type="text" placeholder="Password"/>
+	<button>Login</button>
+	<p class="message">Not Registered? <a href="#">Register</a></p>
+	</form>
+	</div>
+	</div>
+		
+		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+		<script>
+		$('.message a').click(function(){
+		$('form').animate({height:"toggle", opacity: "toggle"}, "slow");
+		});
+		</script>
+</body>
+</html>
+	

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<title>BMI Calculator </title>
+<link rel="shortcut icon" href="../Imgs/Umb.Ico">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+
+</head>
+<body>
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="../Imgs/logotop.jpg" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+
+</header>
+<ul class="shadow anchor16 topnav topnav_hide">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a class="active" href="#BMI Form">BMI Form</a></li>
+<li><a href="../UMBHealthNewsletter/UMBHealthNewletter.html">UMB Health Newsletter </a></li>
+<li><a href="../us/us.html">About Us</a></li>
+</ul>
+
+
+<!--Desktop-->
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="../Imgs/logotop.jpg" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="../Imgs/logo.jpg" class="logo">
+  </header>
+
+  <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div>
+  
+<ul class="anchor12 sidenav shadow">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a class="active" href="#BMI Form">BMI Form</a></li>
+<li><a href="../UMBHealthNewsletter/UMBHealthNewsletter.html">UMB Health Newsletter </a></li>
+<li><a href="../us/us.html">About Us</a></li>
+</ul>
+</div>
+
+
+
+<div class="anchor13 content content_minim content_top">
+
+
+
+<div class="BMIpage">
+ <title>BMI Calculator</title>
+    <script type="text/javascript">
+        function computeBMI()
+ {
+            //Obtain user inputs
+            var height=Number(document.getElementById("height").value);
+            var heightunits=document.getElementById("heightunits").value;
+            var weight=Number(document.getElementById("weight").value);
+            var weightunits=document.getElementById("weightunits").value;
+             //Convert all units to metric
+             
+            if (heightunits=="inches") height/=39.3700787;
+            if (weightunits=="lb") weight/=2.20462;
+
+            //Perform calculation
+            var BMI=weight/Math.pow(height,2);
+
+            //Display result of calculation
+            document.getElementById("output").innerText=Math.round(BMI*100)/100;
+
+            if (output<18.5)
+            document.getElementById("comment").value = "Underweight";
+            if (output>=18.5 && output<=25)
+            document.getElementById("comment").value = "Normal";
+            if (output>=25 && output<=30)
+            document.getElementById("comment").value = "Obese";
+            if (output>30)
+            document.getElementById("comment").value = "Overweight";
+            document.getElementById("answer").value = output; 
+        }
+  
+ 
+ </script>
+</head>
+<body>
+    <h1>Know your Body Mass Index </h1>
+    Enter your height: <input type="text" id="height"/>
+        <select type="multiple" id="heightunits">
+            <option value="metres" selected="selected">metres</option>
+            <option value="inches">inches</option>
+        </select>
+  
+    Enter your weight: <input type="text" id="weight"/>
+        <select type="multiple" id="weightunits">
+            <option value="kg" selected="selected">kilograms</option>
+            <option value="lb">pounds</option>
+        </select>
+    
+    <input type="submit" value="Compute BMI" onclick="computeBMI();">
+    <>Your BMI is: <span id="output">?</span></>
+
+   	<div class="table""
+   	<table class="navigation noborder">
+<tr>
+
+<table class="noborder">
+<table align="right">
+<table width="400">
+<tr><th colspan="4"><b>BMI Classification</b></th></tr>
+<tr><td>18.5 or less</td><td>Underweight</td><td><a href="/bmi-classification/bmi-underweight-information.php" title="Underweight Information">Info</a></td><td><a href="/treatment/underweight-treatment.php" title="Underweight Treatment">Treatment</a></td></tr>
+<tr><td>18.5 to 24.99</td><td>Normal Weight</td><td><a href="/bmi-classification/bmi-normal-weight-information.php" title="Normal Weight Information">Info</a></td><td>Treatment</td></tr>
+<tr><td>25 to 29.99</td><td>Overweight</td><td><a href="/bmi-classification/bmi-overweight-information.php" title="Overweight Information">Info</a></td><td><a href="/treatment/overweight-treatment.php" title="Overweight Treatment">Treatment</a></td></tr>
+<tr><td>30 to 34.99</td><td>Obesity (Class 1)</td><td><a href="/bmi-classification/bmi-obesity-information.php" title="Obesity Information">Info</a></td><td><a href="/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+<tr><td>35 to 39.99</td><td>Obesity (Class 2)</td><td><a href="/bmi-classification/bmi-obesity-class-2-information.php" title="Obesity Class 2 Information">Info</a></td><td><a href="/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+<tr><td>40 or greater</td><td>Morbid Obesity</td><td><a href="/bmi-classification/bmi-obesity-class-3-information.php" title="Obesity Class 3 Information">Info</a></td><td><a href="/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+<tr><td colspan="4"><br />Detailed Information: <a href="/bmi-related-disease.php" title="BMI Related Disease">BMI Related Disease</a></td></tr>
+</table></td>
+</p>
+   
+<!-- Your BMI code ends here-->
+
+  
+  <script type="text/javascript">
+
+function BodyFat() {
+var weight = parseInt(document.getElementById("weightBox").value, 10);
+var waist = parseInt(document.getElementById("waistBox").value, 10);
+var Factor1 = weight * 1.082 + 94.42;   
+var Factor2 = waist * 4.15;
+var LBMass = Factor1 - Factor2;
+var BFWeight = weight - LBMass;
+var BFPercent = (BFWeight * 100/ weight).toFixed(2);  // 2 decimal places
+document.getElementById("bodyfatBox").value = BFPercent;
+}
+</script>
+
+</head>
+<body>
+
+<h1>Know Your Body Fat</h1>
+
+Weight: <input type="text" id="weightBox" size="4" value="150"> pounds
+<br>
+Waist measurement: <input type="text" id="waistBox" size="4" value="32" > inches
+<br>
+BodyFat: <input type="text" id="bodyfatBox" size=4 value=0> percent
+<br>
+<input type="button" value="Calculate body fat" onclick="BodyFat();">
+
+ <!-- Your Body Fat code ends here-->
+ 
+ 
+<hr>
+
+<footer class="footer footer_minim">
+  <p>© 2018 UMass Boston <br>Address: 100 Morrissey Blvd Boston MA 02125 <br>Phone: 617-287-5000</p>
+</footer>
+
+  <script>
+    var forEach = function(elems, cb) {
+      return Array.prototype.forEach.bind(elems)(cb)
+    }
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+  </script>
+
+</html>

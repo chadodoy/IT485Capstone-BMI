@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="background_1">
+<title>BMI Calculator </title>
+<link rel="shortcut icon" href="../Imgs/Umb.Ico">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+
+</head>
+<body>
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="../Imgs/logotop.jpg" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+
+</header>
+
+<ul class="shadow anchor16 topnav topnav_hide">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+<li><a class="active" href="#UMBHealthNewsletter">UMB Health Newsletter</a></li> 
+<li><a href="../us/us.html">About Us</a></li>
+</ul>
+
+<!--Desktop-->
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="../Imgs/logotop.jpg" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="../Imgs/logo.jpg" class="logo">
+  </header>
+
+  <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div>
+
+<ul class="anchor12 sidenav shadow">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+<li><a class="active" href="#UMBHealthNewsletter">UMB Health Newsletter</a></li>
+<li><a href="../us/us.html">About Us</a></li>
+</ul>
+
+</div>
+
+<div class="anchor13 content content_minim content_top">
+	
+<div class="fa_container">
+<a href="https://www.instagram.com/explore/locations/121374699/UMB website/"><i class="fa fa-instagram"></i></a>
+<a href="https://twitter.com/UMB website"><i class="fa fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/UMB website"> <i class="fa fa-linkedin"></i></a>
+<a href="https://www.facebook.com/UMB website"> <i class="fa fa-facebook"></i></a>
+</div>
+
+ <!-- Enter your code here-->
+ <!-- When you start coding erase all code within this area.-->
+ 
+ 
+
+<div class="anchor17">
+<h1>University of Massachusetts Boston</h1>
+
+</div>
+
+<div class="anchor18 text_hidden">
+</div>
+ <!-- Your code ends here-->
+
+</div>
+
+  <script>
+    var forEach = function(elems, cb) {
+      return Array.prototype.forEach.bind(elems)(cb)
+    }
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+  </script>
+
+</body>
+</html>

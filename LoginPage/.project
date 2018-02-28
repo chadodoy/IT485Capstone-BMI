@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>testing</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.aptana.projects.webnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>main.css</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/485%20Full%20files%20testing%20feb%2021/Home/main.css</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
