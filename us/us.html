@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<title>BMI Calculator </title>
+<link rel="shortcut icon" href="../Imgs/Umb.Ico">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="../Imgs/Umb.Ico">
+<link rel="stylesheet" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+
+</head>
+<body>
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="../Imgs/logotop.jpg" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+
+</header>
+
+<ul class="shadow anchor16 topnav topnav_hide">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a class="active" href="#About Us">About Us</a></li>
+<li><a href="../UMBHealthNewsletter/UMBHealthNewsletter.html">UMB Health Newsletter</a></li>
+<li><a href="../Us/us.html">About Us</a></li>
+</ul>
+
+
+<!--Desktop-->
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="../Imgs/logotop.jpg" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="../Imgs/logo.jpg" class="logo">
+  </header>
+
+  <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div>
+  
+<ul class="anchor12 sidenav shadow">
+<li><a href="../Home/index.html">Home</a></li>
+<li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+<li><a href="../UMBHealthNewsletter/UMBHealthNewsletter.html">UMB Health Newsletter </a></li>
+<li><a class="active" href="#About Us">About Us</a></li>
+</ul>
+</div>
+
+
+<div class="anchor13 content content_minim content_top">
+ <!-- Enter your code here \ Only for internal use.-->
+<h2>About Our Group</h2>
+
+<figure class="cover">
+          <img src="Image_1.jpg" alt="owners">
+          <figcaption>TEAM 1</figcaption>         
+        </figure>
+
+<div class="anchor13 content content_minim content_top">
+ <!-- Enter your code here-->
+ <!-- When you start coding erase all code within this area.-->
+<h1> BMI For UMass Boston Students </h1>
+<h2>  Group Members: Armando, Abin, Ali, Antonio and Henry</h2>
+
+</div>
+
+<footer class="footer footer_minim">
+  <p>© 2018 UMass Boston <br>Address: 100 Morrissey Blvd Boston MA 02125 <br>Phone: 617-287-5000</p>
+</footer>
+
+  <script>
+    var forEach = function(elems, cb) {
+      return Array.prototype.forEach.bind(elems)(cb)
+    }
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+    
+    
+ <title>BMI Calculator</title>
+    <script type="text/javascript">
+        function computeBMI()
+ {
+            //Obtain user inputs
+            var height=Number(document.getElementById("height").value);
+            var heightunits=document.getElementById("heightunits").value;
+            var weight=Number(document.getElementById("weight").value);
+            var weightunits=document.getElementById("weightunits").value;
+             //Convert all units to metric
+             
+            if (heightunits=="inches") height/=39.3700787;
+            if (weightunits=="lb") weight/=2.20462;
+
+            //Perform calculation
+            var BMI=weight/Math.pow(height,2);
+
+            //Display result of calculation
+            document.getElementById("output").innerText=Math.round(BMI*100)/100;
+
+            if (output<18.5)
+            document.getElementById("comment").value = "Underweight";
+            if (output>=18.5 && output<=25)
+            document.getElementById("comment").value = "Normal";
+            if (output>=25 && output<=30)
+            document.getElementById("comment").value = "Obese";
+            if (output>30)
+            document.getElementById("comment").value = "Overweight";
+            document.getElementById("answer").value = output; 
+        }
+    
+    
+    
+  </script>
+
+</body>
+</html>

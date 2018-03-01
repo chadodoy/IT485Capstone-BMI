@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<body>
+	
+<div class="form">
+ 
+ <form  action="login.php" autocomplete="on"> 
+     <h2>Log in</h2> 
+     <p> 
+          <label for="username" class="uname" data-icon="u" >Username:</label>
+          <input id="username" name="username" required="required" type="text" placeholder="Username"/>
+     </p>
+     <p> 
+          <label for="password" class="youpasswd" data-icon="p">Password:</label>
+          <input id="password" name="password" required="required" type="password" placeholder="Password" /> 
+     </p>
+     <p class="keeplogin"> 
+          <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+          <label for="loginkeeping">Keep me logged in</label>
+     </p>
+     
+     <p class="Forget Password?"> 
+          <input type="checkbox" name="forgetpass" id="forgetpass" value="forgetpass" /> 
+          <label for="forgetpass">Forget my Password?</label>
+     </p>
+     <p class="login button"> 
+     
+          <input type="submit" value="Login" /> 
+     </p>
+</form>
+</div>
+
+</body>
+
+</html>
+
+
