@@ -2,7 +2,8 @@
 <html class="background_1">
 <title>BMI Calculator </title>
 <link rel="shortcut icon" href="../Imgs/Umb.Ico">
-
+<h1> UMass Boston Registration/Sign in Page </h1>
+<h1> Keep Track of your Health and Stay Fit </h1>
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +16,48 @@
 
 
 <body>
+	
+
+<div class="login-page">
+ 	<div class="formm">
+ 		
+ 		<formm class"register-formm">
+ 		<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" <p> </p>
+ 		<p class="message"> Go Ahead! Register :) <p> </p>
+ 		<input type="text" placeholder="First Name"/>
+ 		<input type="text" placeholder="Last Name"/>	
+		<input type="text" placeholder="Email/User Name"/>
+		<input type="password" placeholder="Password"/>
+		<input type="password" placeholder="Re-Type Password"/>
+		
+		<button>Create</button> <p> </p>
+	
+		<p class="message"> Already Registered? <a href="#">Login</a>
+		<p> </p>
+	</formm>
+	
+	
+	<formm class="login-formm">
+	<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" align="center"> <p> </p>
+	<p class="message">Secure Access Login <p> </p>
+	<input type="text" placeholder="UMass Email Address"/>
+	<input type="text" placeholder="Password"/>
+	<button>Login</button>
+	<p class="message">Not Registered? <a href="#">Register</a></p>
+	</formm>
+	</div>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+		<script>
+		$('.message a').click(function(){
+		$('formm').animate({height:"toggle", opacity: "toggle"}, "slow");
+		});
+		</script>
+
+
+
+	
 
 <!--Mobile-->
 <header class="shadow anchor15">
@@ -72,7 +115,6 @@
 </div>
 
 
-<h3>Welcome To UMass Boston...</h3>
 
  
 

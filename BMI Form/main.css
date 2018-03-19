@@ -36,6 +36,9 @@ h3 {
     color: black;
 }
 
+.noborder {
+	float:right;
+}
 
 /* Normal CSS ends here. */
 
@@ -286,8 +289,8 @@ div.content h2 {
 
         .logo_sidetop {
             float: right;
-            margin: 2px;
-            margin-right: 10px;
+            margin-top:-10px;
+            margin-right: 8px;
             width: 140px;
         }
 
