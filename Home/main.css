@@ -6,7 +6,7 @@ body {margin: 0;}
 
 
 .fa_container {
-	margin-top: -915px;
+	margin-top: -10px;
 	margin-right: -10px;
 }
 
@@ -43,12 +43,6 @@ body {margin: 0;}
   color: white;
 }
 
-h1 {text-align: center;
-	color: white;
-	font-size: 25px;
-}
-
-
 h2 {float: right;}
 .text_hidden {
     display: none;
@@ -57,7 +51,7 @@ h2 {float: right;}
 .background_1 {
 
 
-background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(umb1.jpg);
+background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(background_1.jpg);
 	height:100vh;
 	background-position: center bottom;
     -webkit-background-size: cover; 
@@ -66,76 +60,6 @@ background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(umb1.jpg
     background-size: cover; 
 
     }
-
-.login-page{
-	width:360px;
-	padding: 5% 0 0;
-	margin: auto;
-} 
-
-
-.formm{
-	position:static;
-	z-index: 1;
-	background:rgba(7,40,195,0.8);
-	max-width: 260px;
-	margin: 0 auto 300px;
-	padding: 40px;
-	text-align: center;
-	color: white;
-	
-}
-
-.formm input{
-	font-family:  sans-serif;
-	font-family:  Roman;
-	outline: -1;
-	background: #f2f2f2;
-	width: 100%;
-	border: 0;
-	margin: 0 0 10px;
-	padding 15px;
-	box-sizing: border-box;
-	font-size: 18px;
-	height:auto;
-
-}
-
-.formm button{
-	font-family:  sans-serif;
-	font-family:  Roman;
-	text-transform: uppercase;
-	outline: 0;
-	background: #4CAF50;
-	width: 100%;
-	border: 0;
-	padding: 15px;
-	color: #FFFFFF
-	font-size: 24px;
-	cursor: pointer;
-	color: white;
-}
-
-.formm button: hover,.formm button:active{
-	background: #43A047;
-}
-
-.formm .message{
-	margin:15px 0 0;
-	color: yellow;
-	font-size: 24px;
-}
-
-.formm .message a{
-	color: #4CAF50;
-
-}
-
-.formm .login-formm{
-	display: none;
-}
-
-
 
 
 h2 {
