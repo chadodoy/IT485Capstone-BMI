@@ -1,0 +1,571 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+body {margin: 0;}
+
+/* Enter normal CSS here.. \ For internal use only.*/
+/* Below are codes for Main Content area until new section starts. */
+h4 {
+    font-size: 12px;
+}
+
+.cover {
+    float: right;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    border-radius: 3px;
+}
+
+
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+
+}
+
+
+figure {
+  float: left;
+  width: 30%;
+  text-align: center;
+ 
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+
+h1{
+	color:white;
+}
+
+
+img {
+    width: 400px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+
+/* Normal CSS ends here. */
+
+/* Here starts media query code for mobile version for Main Content area. */
+@media screen and (max-width: 600px){
+/* Enter mobile CSS here.. */
+
+.cover {
+    margin-left: 0;
+    float: none;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    border-radius: 3px;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* Mobile CSS ends here.. */
+}
+
+/* Your code ends here. \ For internal use only. */
+
+/* Don't change anything below this. \ For internal use only. */
+
+/* New Code. For this version of draft. */
+
+div.content h2 {
+    margin-bottom: 5px;
+}
+
+/* Content \ Codes below are for margin and everything rest will be handled by codes above. */
+/* Content has to state one is full and other in minim is full change based on navigation bar on the left. */
+.content {
+    margin-top: 16px;
+    margin-right: 16px;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+.content_full{
+    margin-top: 76px;
+    margin-left: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.content_minim{
+    margin-left: 216px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+/* Mobile version for content area. */
+    @media screen and (max-width: 900px){
+
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 1px 16px;
+
+        font-family: 'Raleway', sans-serif;
+        }
+
+    .content_top {
+        margin-top: 100px;
+        }
+
+    .content_low {
+        margin-top: 70px;
+        }
+}
+
+/* Button */
+/* These codes are responsible for having button on right place when it's pressed. */
+.button3_maxim {
+    margin-top: -11px;
+    margin-left: 159px;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    z-index: 5;
+}
+
+.button3_minim {
+    margin-top: -60px;;
+    margin-left: 218px;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    z-index: 5;
+}
+
+    @media screen and (max-width: 900px){
+
+        .button2{
+        float: right;
+        border: none;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        cursor: pointer;
+
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+
+        color: #333;
+
+        background-color: white; 
+        border: 2px solid #333;
+        }
+
+        .button2:hover {
+        background-color: red;
+        color: white;
+        }
+    }
+
+/* Side navigation */
+/* Below are codes for side navigation and top navigation while in desktop mode. */
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 90%;
+
+    font-family: 'Raleway', sans-serif;
+    top: 100px;
+
+    background-color: lightblue;
+    z-index: 2;
+}
+
+/* Side navigation has also show and hide state as mentioned in HTML. */
+.sidenav_show{
+    margin-left: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.sidenav_hide{
+    margin-left: -200px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.sidenav li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+
+    color: #333;
+}
+ 
+.sidenav li a.active {
+    color: black;
+    background-color: #B0BEC5;
+}
+
+.sidenav li a:hover:not(.active) {
+    color: black;
+    background-color: #E0E0E0;
+}
+
+
+    @media screen and (max-width: 900px){
+        
+        .sidenav{
+        display: none;
+        }
+    }
+
+/* Side navigation Top */
+/* This is top navigation in desktop mode while left navigation is hidden. */
+
+        .sidetop {
+        display: block;
+        height: 60px;
+        width: 100%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        right: 0;
+        position: fixed;
+        background-color: white;
+
+        z-index: 1;
+        }
+
+        .sidetop_hide {
+            margin-top: -70px;
+
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .sidetop_show {
+            margin-top: 0;
+
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .logo_sidetop {
+            float: right;
+            margin: 0;
+            margin-right: 10px;
+            width: 120px;
+        }
+
+/* Side navigation Header */
+/* Side navigation use separate header as it gives us flexibility to add images as logo. */
+header.anchor16 {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    padding: 0;
+    float: left;
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
+
+.logo {
+    width: 200px;
+    float: left;
+    margin-top: 0;
+    position: fixed;
+    display: block;
+}
+
+    @media screen and (max-width: 900px){
+
+        button.anchor14{
+        display: none;
+        }   
+
+
+        header.anchor16 {
+        display: none;   
+        }
+        }
+
+
+/* Top navigation */
+/* Below are top navigation for mobile version. */
+header.anchor15 {
+    display: none;
+}
+
+ul.anchor16 {
+    display: none;
+}
+
+.logo_top {
+    display: none
+}
+
+    @media screen and (max-width: 900px){
+
+        header.anchor15 {
+        display: block;
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top:0;
+        position: fixed;
+        z-index: 1;
+
+        background-color: white;
+        }
+
+        .logo_top {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+        color: #333;
+        width: 140px;
+        margin-top: 5px;
+
+        margin-right: 30px;
+        float: right;
+        }
+
+        ul.anchor16 {
+        display: block;
+        }
+
+        .topnav {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        width:100%;
+        position:relative;
+        background-color: white;
+        font-family: 'Raleway', sans-serif;
+        }
+
+        .topnav_hide{
+        margin-top: -20em;
+
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        }
+
+        .topnav_show{
+        margin-top: 0;
+        top:60px;
+
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        }
+
+        .topnav li a {
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+        text-align: center;
+        float: none;
+        color: #333;
+        }
+ 
+        .topnav li a.active {
+        color: black;
+        background-color: #B0BEC5;
+        }
+
+        .topnav li a:hover:not(.active) {
+        background-color: #E0E0E0;
+        color: black;
+        }
+    }
+
+
+/* Hamburger Button */ 
+/* Here are hamburger Button. It uses transform and transition to achieve an animation. */
+.bring_to_front {
+    z-index: 2;
+    position: fixed;
+}
+    @media screen and (max-width: 900px){
+.bring_to_front {
+    display: none;
+}   
+    }
+  .hamburger {
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; 
+}
+
+  .hamburger:hover {
+    opacity: 0.7; }
+
+    .hamburger:focus {
+        outline:none;
+    }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+
+   /*Change*/
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+  .hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+  .hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/* Top navigation button location code */
+@media screen and (max-width: 900px){
+    .button2_location {
+        float: left;
+        margin: 18px;
+    }
+}
+
+/* Footer */
+.footer {
+    position:fixed;
+    float: right;
+    right: 0;
+    bottom: 0;
+    background-color: #003333;
+    height: 70px;
+    z-index: 0;
+}
+
+.footer_minim {
+    width: calc(100% - 200px);
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.footer_maxim {
+    width: 100%;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.footer p {
+    margin:0px;
+    padding:10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 900px){
+    .footer {
+    width: 100%;
+    font-size:14px;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    background-color: #003333;
+    height: 70px;
+    z-index: 0;
+    border-radius:0;
+    margin:2px 25px 0px 25px; 
+    padding:0px;
+    margin-right: 0px;
+    }
+    }
+      

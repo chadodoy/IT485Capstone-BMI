@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<head>
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+
+
+<div class="login-page">
+  <p> </p> 
+<div class="formm">
+  
+    <formm class"register-formm">
+    <img src="{% static 'Imgs/UMass-logo.png' %}" alt="Smiley face" height="35" width="260" <p> </p>
+    <p class="message"> Go Ahead! Register :) <p> </p>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+          {% if field.name == "username" %}
+              <label for="id_username">Email</label>
+              <input type="email" name="username" maxlength="150" autofocus="" required="" id="id_username">
+          {% else %}
+            {{ field.label_tag }}
+            {{ field }}
+          {% endif %}
+
+        {% endfor %}
+
+        <label >First Name</label>
+        <input type="text" name="first_name">
+
+        <label >Last Name</label>
+        <input type="text" name="last_name">
+
+        <label >Height (in.)</label>
+        <input type="number" step=".1" name="height">
+
+        <label >Weight (pounds)</label>
+        <input type="number" step=".1" name="weight">
+
+        <label >Subscribe to newsletter?</label>
+        <input type="checkbox" id="id_subscribe" name="subscribe" checked>
+
+        <button type="submit">Sign up</button>
+    </form>
+  
+    <p class="message"> Already Registered? <a href="#">Login</a>
+    <p> </p>
+  </formm>
+  
+  
+  <formm class="login-formm">
+  <img src="{% static 'Imgs/UMass-logo.png' %}" alt="Smiley face" height="35" width="260" align="center"> <p> </p>
+  <p class="message">Secure Access Login <p> </p>
+    <form method="post">
+      {% csrf_token %}
+      <input name="loginuser" type="email" placeholder="Enter Email" required/>
+      <input name="loginpass" type="password" placeholder="Enter Password " required/>
+      <button type="submit">Login</button>
+    </form>
+  <p class="message">Not Registered? <a href="#">Register</a></p>
+  </formm>
+  </div>
+  </div>
+
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script>
+    $('.message a').click(function(){
+    $('formm').animate({height:"toggle", opacity: "toggle"}, "slow");
+    });
+    </script>
+   
+<video playsinline autoplay sound muted="" loop poster="polina.jpg" id="bgvid">
+    <source src="{% static 'vids/video222.mp4' %}" type="video/webm">
+
+{% endblock %}

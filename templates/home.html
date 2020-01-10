@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+<script type="text/javascript">
+
+
+
+$(document).ready(function(){
+    $('#table_id td.y_n').each(function(){
+        if ($(this).text() == 'You are underweight!') {
+            $(this).css('background-color','#008000');
+        }
+        if ($(this).text() == 'You are overweight!') {
+            $(this).css('background-color','#FF6347');
+        }
+    });
+});
+
+</script>
+
+
+{% if user.is_authenticated %}
+  
+<div style="position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);" class="w3-container w3-center w3-animate-opacity"> 
+
+  <h1><h1 align="left" style="color:black; font-weight: bold;
+  color: #fff;
+  font-size: 45px; text-shadow: 1px 1px 2px black">Good evening {{ user.first_name }}!</h1></h1>
+    <h1 align="left" style="color:black">Today is {% now "F  jS Y" %}.</h1>
+    <h1 style="text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue; font-size: 30px;">Happy Spring! :)</h1>
+
+    <h1 align="left" style="color:black">Tomorrow will be a sunny day with high temps of 72. Perfect weather for some <a href="https://www.fitday.com/fitness-articles/fitness/ready-set-5-exercises-for-spring.html">healthy exercise!<a></h1>
+    <h1 style="color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Your Current BMI Information</h1>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+</style>
+
+<style>
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: center;
+}
+</style>
+
+
+<table id="table_id" align="center">
+  <tr>
+    <th>Height</th>
+    <th>Weight</th> 
+    <th>BMI</th>
+  </tr>
+  <tr id="somerow">
+    <td><h1 style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;">{{ bmi_info.height }} in.</h1></td>
+    <td><h1 style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;">{{ bmi_info.weight }} lbs.</h1></td>
+    <td class="y_n" id="number"><h1 style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;">{{ bmi_info.bmi_info }}</h1></td>
+  </tr>
+  <tr>
+    <td class="y_n" colspan="3" align="center";"><h1 style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;">You are <span style="color:blue">{{ bmi_info.bmi_stat }}</span>!</h1></td>
+  </tr>
+</table>
+
+
+  <p align="center" style="color:black"><a href="{% url 'logout' %}">logout</a></p>
+
+</div>
+
+<video playsinline autoplay sound muted="" loop poster="polina.jpg" id="bgvid">
+    <source src="{% static 'vids/video222.mp4' %}" type="video/webm">
+</video>
+
+{% else %}
+
+  <p align="center" style="color:black">You are not logged in</p>
+ <p align="center" style="color:black">
+  <a href="{% url 'login' %}">login</a>
+ </p>
+  
+<video playsinline autoplay sound muted="" loop poster="polina.jpg" id="bgvid">
+    <source src="{% static 'vids/video222.mp4' %}" type="video/webm">
+
+
+{% endif %}
+{% endblock %}

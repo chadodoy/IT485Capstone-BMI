@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About Us HTML{% endblock %}
+
+{% block content %}
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+
+</head>
+ 
+
+<span align="center">
+
+<div class="BMIpage">
+ <title>BMI Calculator</title>
+    <script type="text/javascript">
+        function computeBMI()
+ {
+            //Obtain user inputs
+            var height=Number(document.getElementById("height").value);
+            var heightunits=document.getElementById("heightunits").value;
+            var weight=Number(document.getElementById("weight").value);
+            var weightunits=document.getElementById("weightunits").value;
+             //Convert all units to metric
+             
+            if (heightunits=="inches") height/=39.3700787;
+            if (weightunits=="lb") weight/=2.20462;
+
+            //Perform calculation
+            var BMI=weight/Math.pow(height,2);
+
+            //Display result of calculation
+            document.getElementById("output").innerText=Math.round(BMI*100)/100;
+
+            if (output<18.5)
+            document.getElementById("comment").value = "Underweight";
+            if (output>=18.5 && output<=25)
+            document.getElementById("comment").value = "Normal";
+            if (output>=25 && output<=30)
+            document.getElementById("comment").value = "Obese";
+            if (output>30)
+            document.getElementById("comment").value = "Overweight";
+            document.getElementById("answer").value = output; 
+        }
+  
+ 
+ </script>
+</head>
+
+
+<body style="margin:0;  
+        background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2017/08/umass-boston-1.jpg);
+        background-size: cover;">
+    <h1 style="color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align:center;">Know your Body Mass Index </h1>
+    <form method="post">
+        {% csrf_token %}
+        
+    <font color="Black">Enter your height: <input type="text" name="height" id="height"/>
+        <select type="multiple" id="heightunits">
+            <option value="inches" selected="selected">inches</option>
+            <option value="meters">meters</option>
+        </select> 
+  
+    <font color="Black">Enter your weight: <input type="text" name="weight" id="weight"/>
+        <select type="multiple" id="weightunits">
+            <option value="lb" selected="selected">pounds</option>
+            <option value="kg">kilograms</option>
+        </select> 
+    <button type="button" value="Compute BMI" onclick="computeBMI();">Compute BMI</button>
+    <input style="display: {{ update_db }};" type="submit" value="Update BMI">
+     
+ </form>
+    
+    <br></br>
+
+<p style="display: {{ updated_text }}; font-size: 25px;">Successfully updated your bmi in the database!</p>
+      
+ <h5 style=" color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    display:block;
+    text-align:center;
+    font-size: 25px;
+    width: 300px;
+    border: 15px solid lightblue;
+    margin: auto;"> Your BMI is: <span id="output">?</h5>
+  
+   
+ <h4> <a href="http://www.askdocweb.com/bmi4lean.html"> Click here to calculate BMI for Athletes </a> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
+ <a href="http://www.calculator.net/pregnancy-weight-gain-calculator.html"> Click here for calculate BMI for Pregnant Women </a>
+    </h4>
+ 
+    <div class="table"
+    <table class="navigation noborder">
+<tr>
+
+<table class="noborder">
+<table align="right">
+<table width="400" align="center">
+<tr><th colspan="4"><b> <font color="Brown"> <u>BMI Classification </u> </b></th></tr> <b> </b>
+<tr><td>18.5 or less</td><td>Underweight</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-underweight-information.php" title="Underweight Information">Info</a></td><td><a href="http://www.bmi-calculator.net/treatment/underweight-treatment.php" title="Underweight Treatment">Treatment</a></td></tr>
+<tr><td>18.5 to 24.99</td><td>Normal Weight</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-normal-weight-information.php" title="Normal Weight Information">Info</a></td><td><a href="https://www.livestrong.com/article/97879-stay-fit-/" title="Normal Weight Treatment">Treatment</a></td></tr>
+<tr><td>25 to 29.99</td><td>Overweight</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-overweight-information.php" title="Overweight Information">Info</a></td><td><a href="http://www.bmi-calculator.net/treatment/overweight-treatment.php" title="Overweight Treatment">Treatment</a></td></tr>
+<tr><td>30 to 34.99</td><td>Obesity (Class 1)</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-obesity-information.php" title="Obesity Information">Info</a></td><td><a href="http://www.bmi-calculator.net/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+<tr><td>35 to 39.99</td><td>Obesity (Class 2)</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-obesity-class-2-information.php" title="Obesity Class 2 Information">Info</a></td><td><a href="http://www.bmi-calculator.net/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+<tr><td>40 or greater</td><td>Morbid Obesity</td><td><a href="http://www.bmi-calculator.net/bmi-classification/bmi-obesity-class-3-information.php" title="Obesity Class 3 Information">Info</a></td><td><a href="http://www.bmi-calculator.net/treatment/obesity-treatment.php" title="Obesity Treatment">Treatment</a></td></tr>
+</table></td>
+
+ <!--  Source: "http://www.bmi-calculator.net" >
+   
+   
+<!-- Your BMI code ends here-->
+
+  
+  <script type="text/javascript">
+
+function BodyFat() {
+var weight = parseInt(document.getElementById("weightBox").value, 10);
+var waist = parseInt(document.getElementById("waistBox").value, 10);
+var Factor1 = weight * 1.082 + 94.42;   
+var Factor2 = waist * 4.15;
+var LBMass = Factor1 - Factor2;
+var BFWeight = weight - LBMass;
+var BFPercent = (BFWeight * 100/ weight).toFixed(2);  // 2 decimal places
+document.getElementById("bodyfatBox").value = BFPercent;
+}
+</script>
+
+</head>
+<body>
+
+<h1 style=" color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    display:block;
+    text-align:center;
+    font-size: 25px;
+    width: 300px;
+    margin: auto; margin-top:25px;">Know Your Body Fat</h1>
+
+ <font color="white"> Weight: <input type="text" id="weightBox" size="4" value="0"> pounds
+<br>
+<font color="white"> Waist measurement: <input type="text" id="waistBox" size="4" value="0" > inches
+<br>
+<font color="white"> BodyFat: <input type="text" id="bodyfatBox" size=4 value=0> percent
+<br> </br>
+<input type="button" value="Calculate Body Fat" onclick="BodyFat();">
+<br> </br>
+<div class="table""
+    <table class="navigation bodyfat">
+    
+<tr>
+    
+    <tr> <b> <p> <font color="yellow"> Acceptable Body Fat:</font> <tr><font color="Yellow">Women 21%-24% --- <tr>Men 14%-17% </tr> 
+
+<table class="bodyfat">
+<table align="justify">
+<table width="50">
+
+</b></th></tr> </p> </font>
+
+</table></td>
+
+ <!-- Your Body Fat code ends here-->
+
+
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% load staticfiles %}
+
+{% block title %}Sign Up{% endblock %}
+
+<html>
+<!DOCTYPE html>
+
+
+</video>
+
+
+<title>BMI Calculator </title>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block extrahead %}{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+</head>
+
+<body>
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="{% static 'Imgs/logotop.jpg' %}" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+<h1 style="text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: blue; margin-top:25px";> UMass Boston BMI App </h1>
+<!-- <h1> Keep Track of your Health and Stay Fit </h1> -->
+</header>
+
+<ul class="shadow anchor16 topnav topnav_hide">
+  <li><a class="active" href="{% url 'login' %}">Home</a></li>
+  <li><a href="{% url 'bmiform' %}">BMI Form</a></li>
+<!--   <li><a href="{% url 'newsletter' %}">UMB Health Newsletter </a></li> -->
+  <li><a href="{% url 'aboutus' %}">About Us</a></li>
+  {% if user.is_authenticated %}
+    <li><a id="login_page" href="{% url 'logout' %}"">Log out</a></li>
+  {% else %}
+    <li><a id="login_page" href="{% url 'login' %}"">Log in </a></li>
+  {% endif %}
+</ul>
+
+
+<!--Desktop-->
+
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="{% static 'Imgs/logotop.jpg' %}" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="{% static 'Imgs/logo.jpg' %}" class="logo">
+  </header>
+
+<!--   <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div> -->
+
+
+<ul class="anchor12 sidenav shadow">
+  <li><a class="active" href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'bmiform' %}">BMI Form</a></li>
+<!--   <li><a href="{% url 'newsletter' %}">UMB Health Newsletter </a></li> -->
+  <li><a href="{% url 'aboutus' %}">About Us</a></li>
+  {% if user.is_authenticated %}
+    <li><a id="login_page" href="{% url 'logout' %}"">Log out</a></li>
+  {% else %}
+    <li><a id="login_page" href="{% url 'login' %}"">Log in </a></li>
+  {% endif %}
+</ul>
+
+
+</div>
+
+<div class="content">
+	{% block head_content %}
+	{% endblock head_content %}
+	<div class="container">
+      {% block content %}
+      {% endblock content %}
+    </div>
+</div>
+
+<div class="anchor13 content content_minim content_top">
+
+
+<div class="fa_container" style="position: absolute;
+    top: 875px;
+    right: 25px;">
+
+<a href="https://www.instagram.com/umassboston/"><i class="fa fa-instagram"></i></a>
+<a href="https://twitter.com/UMBWellness"><i class="fa fa-twitter"></i></a>
+<a href="https://www.linkedin.com/school/umass-boston/"> <i class="fa fa-linkedin"></i></a>
+<a href="https://www.facebook.com/umbuhs"> <i class="fa fa-facebook"></i></a>
+</div>
+
+<footer class="footer footer_minim">
+<p>© 2018 UMass Boston <br>Address: 100 Morrissey Blvd Boston MA 02125 <br>Phone: 617-287-5000</p>
+</footer>
+
+</div>
+
+
+
+
+ <!-- Your code ends here-->
+
+
+  <script>
+    var forEach = function(elems, cb) {
+      return Array.prototype.forEach.bind(elems)(cb)
+    }
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+
+    // if (isLoggedIn == true){
+    //   $("#login_page").text("Logout")
+    // }
+    // else{
+    //   $("#login_page").text("Login")
+    // }
+
+  
+
+    </script>
+
+</body>
+</html>
+
+{% block styles %}
+{% endblock %}

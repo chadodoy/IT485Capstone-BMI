@@ -1,0 +1,148 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<video playsinline autoplay sound loop poster="polina.jpg" id="bgvid">
+    <source src="{% static 'vids/video222.mp4' %}" type="video/webm">
+
+</video>
+
+
+<title>BMI Calculator </title>
+<link rel="shortcut icon" href="{% static 'Imgs/Umb.Ico' %}">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+</head>
+<body>
+	
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="{% static 'Imgs/logotop.jpg' %}" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+<h1> UMass Boston Registration/Sign in Page </h1>
+<h1> Keep Track of your Health and Stay Fit </h1>
+</header>
+<ul class="shadow anchor16 topnav topnav_hide">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+  <li><a href="../UMBHealthNewsletter/UMBHealthNewsletter.html">UMB Health Newsletter </a></li>
+  <li><a href="../us/us.html">About Us</a></li>
+</ul>
+
+<!--Desktop-->
+
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="{% static 'Imgs/logotop.jpg' %}" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="{% static 'Imgs/logo.jpg' %}" class="logo">
+  </header>
+
+  <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div>
+
+<ul class="anchor12 sidenav shadow">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+  <li><a href="../UMBHealthNewsletter/UMBHealthNewsletter.html">UMB Health Newsletter </a></li>
+  <li><a href="../us/us.html">About Us</a></li>
+</ul>
+</div>
+
+<div class="anchor13 content content_minim content_top">
+
+
+
+<div class="login-page">
+	<p> </p> 
+<div class="formm">
+	
+ 		<formm class"register-formm">
+ 		<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" <p> </p>
+ 		<p class="message"> Go Ahead! Register :) <p> </p>
+ 		<input type="text" placeholder="First Name"/>
+ 		<input type="text" placeholder="Last Name"/>	
+		<input type="text" placeholder="Email/User Name"/>
+		<input type="password" placeholder="Password"/>
+		<input type="password" placeholder="Re-Type Password"/>
+		
+		<button>Create</button> <p> </p>
+	
+		<p class="message"> Already Registered??? <a href="#">Login</a>
+		<p> </p>
+	</formm>
+	
+	
+	<formm class="login-formm">
+	<img src="UMass-logo.png" alt="Smiley face" height="35" width="260" align="center"> <p> </p>
+	<p class="message">Secure Access Login <p> </p>
+	<input type="text" placeholder="UMass Email Address"/>
+	<input type="text" placeholder="Password"/>
+	<button>Login</button>
+	<p class="message">Not Registered? <a href="#">Register</a></p>
+	</formm>
+	</div>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+		<script>
+		$('.message a').click(function(){
+		$('formm').animate({height:"toggle", opacity: "toggle"}, "slow");
+		});
+		</script>
+		
+
+<div class="fa_container">
+<a href="https://www.instagram.com/umassboston/"><i class="fa fa-instagram"></i></a>
+<a href="https://twitter.com/UMBWellness"><i class="fa fa-twitter"></i></a>
+<a href="https://www.linkedin.com/school/umass-boston/"> <i class="fa fa-linkedin"></i></a>
+<a href="https://www.facebook.com/umbuhs"> <i class="fa fa-facebook"></i></a>
+</div>
+
+<footer>
+<footer class="footer footer_minim">
+<p>© 2018 UMass Boston <br>Address: 100 Morrissey Blvd Boston MA 02125 <br>Phone: 617-287-5000</p>
+</footer>
+
+</div>
+
+
+ <!-- Your code ends here-->
+
+
+  <script>
+    var forEach = function(elems, cb) {
+      return Array.prototype.forEach.bind(elems)(cb)
+    }
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+  
+
+    </script>
+    </head>
+    </body>
+</html>

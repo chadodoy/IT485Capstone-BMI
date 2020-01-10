@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About Us HTML{% endblock %}
+
+{% block content %}
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+</head>
+ 
+<div class="anchor13 content content_minim content_top">
+
+
+<h1>TEAM 1: ALI, ABIN, ANTONIO, HENRY, ARMANDO</h1>
+
+<figure class="cover" align="center">
+			
+          <img src="{% static 'Imgs/Image_1.jpg' %}" alt="owners"   width="100" height="295" align="center">
+          <figcaption style="text-align:center;">  First Day: When we finalized the project topic. </figcaption>
+        </figure>
+
+
+<figure class="cover" align="center">
+			
+          <img src="{% static 'Imgs/Image_4.jpg' %}" alt="owners"   width="100" height="295" align="center">
+          <figcaption style="text-align:center;">  We hope you enjoy the rest of your summer! </figcaption> 
+        </figure>
+
+<figure class="cover" align="center">
+			
+          <img src="{% static 'Imgs/Image_3.jpg' %}" alt="owners"   width="100" height="295" align="left">
+          <figcaption style="text-align:center;">  Everyone working on the Project together. </figcaption> 
+        </figure>
+
+<p> </p>
+
+<!-- <figure class ="cover">
+ 
+</figure>
+
+<figure class ="cover">
+
+</figure>
+
+<figure class ="cover">
+
+</figure> -->
+
+
+<div class="anchor13 content content_minim content_top">
+ <!-- Enter your code here-->
+ <!-- When you start coding erase all code within this area.-->
+
+</div>
+
+<video playsinline autoplay sound loop poster="polina.jpg" id="bgvid">
+    <source src="{% static 'vids/gifV.mp4' %}" type="video/webm">
+
+ <!-- Enter your code here \ Only for internal use.-->
+<!-- <h2>About Our Group</h2>
+
+<figure class="cover">
+          <img src="{% static 'Imgs/Image_1.jpg' %}" alt="owners">
+          <figcaption>TEAM 1</figcaption>         
+        </figure>
+
+<div class="anchor13 content content_minim content_top">
+ <!-- Enter your code here-->
+ <!-- When you start coding erase all code within this area.-->
+<!-- <h1> BMI For UMass Boston Students </h1>
+<h2>  Group Members: Armando, Abin, Ali, Antonio and Henry</h2>
+
+</div> -->
+ -->
+{% endblock %}
