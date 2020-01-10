@@ -1,3 +1,5 @@
-# Source code
+# BMI Calculator
 
-For [Django authentication tutorial](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/) parts 1-3.
+A simple BMI calculator using height in meters and weight in kg.
+
+Records are saved in a Sqlite3 database.  Made with Django and Bootstrap.
